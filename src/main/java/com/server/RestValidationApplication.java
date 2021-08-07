@@ -23,6 +23,7 @@ public class RestValidationApplication {
 	}
 
 	// http://localhost:1020/swagger-ui.html#/Employee/
+	//updated 
 	@Bean
 	public Docket swaggerConfiguration() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
