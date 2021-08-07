@@ -37,12 +37,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public String deleteEmp(int id) throws  DatabaseErrorException {
 		boolean flag = dao.existsById(id);
 		if (flag == false)
-			throw new RecordNotFoundException("Employee not found  " + id);
+			throw new RecordNotFoundException("Employee is not found of id  " + id);
 		try {
 			dao.deleteById(id);
 			return "The Employee with id :" + id + " deleted";
 		} catch (Exception e) {
-			throw new  DatabaseErrorException("Some issue with database!! " + e.getMessage());
+			throw new  DatabaseErrorException("Some issue occured with database!! " + e.getMessage());
 		}
 	}
 
