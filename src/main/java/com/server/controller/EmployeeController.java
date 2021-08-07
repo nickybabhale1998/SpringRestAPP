@@ -59,7 +59,7 @@ public class EmployeeController {
 		List<Employee> list = service.getAllEmp();
 		return new ResponseEntity<List<Employee>>(list, HttpStatus.OK);
 	}
-
+//Delete Method
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<String> deleteEmployee(@PathVariable int id) throws  DatabaseErrorException {
 		String msg = service.deleteEmp(id);

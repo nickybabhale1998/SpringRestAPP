@@ -20,13 +20,14 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Autowired
 	private EmployeeDAO dao;
 
+	//employee service 
 	@Override
 	@Transactional(propagation = Propagation.REQUIRED)
 	public Employee saveEmp(Employee emp) throws  DatabaseErrorException {
 		try {
 			emp = dao.save(emp);
 		} catch (Exception e) {
-			throw new  DatabaseErrorException("Some issue with database!! " + e.getMessage());
+			throw new  DatabaseErrorException("Some with issue with database!! " + e.getMessage());
 		}
 		return emp;
 	}
